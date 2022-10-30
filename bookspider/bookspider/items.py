@@ -8,7 +8,7 @@
 import scrapy
 
 
-class BookSpiderItem(scrapy.Item):
+class QuanShuWangItem(scrapy.Item):
     # define the fields for your item here like:
     categoryName = scrapy.Field()
     bookName = scrapy.Field()
@@ -21,5 +21,16 @@ class BookSpiderItem(scrapy.Item):
     author = scrapy.Field()
     intro = scrapy.Field()
     number = scrapy.Field()
+    pass
 
-
+class BiQuGeItem(scrapy.Item):
+    # define the fields for your item here like:
+    bookName = scrapy.Field()
+    author = scrapy.Field()
+    intro = scrapy.Field()
+    cover = scrapy.Field()
+    number = scrapy.Field()
+    chapterName = scrapy.Field()
+    chapterUrl = scrapy.Field()
+    chapterContent = scrapy.Field()
+    pass

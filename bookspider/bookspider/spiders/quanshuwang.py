@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 
-from bookspider.items import BookSpiderItem
+from bookspider.items import QuanShuWangItem
 import scrapy
 import urllib
 
@@ -121,7 +121,7 @@ class QuanshuwangSpider(scrapy.Spider):
 ''',"<br>")
         chapterContent = chapterContent.replace(r" ", "&nbsp")
 
-        item = BookSpiderItem()
+        item = QuanShuWangItem()
         item["categoryName"] = categoryName
         item["bookName"] = bookName
         item["bookUrl"] = bookUrl
