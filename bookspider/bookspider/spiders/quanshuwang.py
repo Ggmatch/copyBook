@@ -10,6 +10,9 @@ class QuanshuwangSpider(scrapy.Spider):
     name = 'quanshuwang'
     allowed_domains = ['quanshuwang.com']
     start_urls = ['http://quanshuwang.com/']
+    custom_settings = {
+        "ITEM_PIPELINES": {"bookspider.pipelines.QuanShuWangPipeline": 300},
+    }
 
     def parse(self, response):
         categorys = response.xpath("//ul[@class='channel-nav-list']/li/a")

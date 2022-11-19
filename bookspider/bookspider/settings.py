@@ -65,7 +65,8 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'bookspider.pipelines.BookspiderPipeline': 300,
+   'bookspider.pipelines.QuanShuWangPipeline': 300,
+   'bookspider.pipelines.BiQuGePipeline': 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

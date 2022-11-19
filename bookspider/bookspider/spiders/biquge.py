@@ -10,8 +10,12 @@ class BiQuGeSpider(scrapy.Spider):
     name = 'biquge'
     allowed_domains = ['biquge7']
     start_urls = ['https://www.biquge7.top/34936']
+    custom_settings = {
+        "ITEM_PIPELINES": {"bookspider.pipelines.BiQuGePipeline": 400},
+    }
 
     def parse(self, response):
+        print("======", self.name, self.start_urls[0], response)
         # 爬取图书元信息：书名、作者、封面图片、简介
         bookName = response.xpath(
             "//div[@class='tits']/h1/text()").extract()[0]
